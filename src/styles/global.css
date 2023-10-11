@@ -1,0 +1,117 @@
+/* Container Flex */
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+
+.header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+  padding: 0 20px;
+  background: rgb(0, 148, 0);
+  color: white;
+  gap: 15px;
+}
+
+/* Main Content */
+
+.main-content-container {
+  display: flex;
+
+  min-height: calc(100vh - 60px);
+}
+
+/* Main Content */
+
+.main-content {
+  padding: 20px;
+  display: block;
+  width: 100%;
+}
+
+/* Side Menu */
+
+.closed {
+  margin-left: -300px;
+}
+
+.side-menu {
+  padding: 20px;
+  margin-left: -300px;
+  transition: ease-in-out 0.5s margin;
+  width: 300px;
+  background: cyan;
+  min-height: calc(100vh - 60px);
+  height: 100%;
+  background: #f7f7f7;
+  border-radius: 2px; /* 角を丸くする */
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
+}
+
+.side-menu.activated {
+  margin-left: 0;
+}
+
+.side-menu ul {
+  margin-top: 10px;
+}
+
+.side-menu ul li {
+  cursor: pointer;
+  padding: 5px 0;
+  transition: 0.35s;
+  text-align: center;
+  color: rgb(71, 71, 71);
+  border-radius: 5px;
+}
+
+.side-menu ul li + li {
+  margin-top: 5px;
+}
+
+.side-menu ul li:hover {
+  background: rgb(190, 190, 190);
+  color: white;
+}
+
+/* Default Button */
+
+.default-button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 20px;
+  color: rgb(149, 255, 149);
+  background: darkgreen;
+  border-radius: 3px;
+  transition: 0.35s;
+}
+
+.default-button:hover {
+  background: rgb(149, 255, 149);
+  color: darkgreen;
+}
+
+/* Dashboard */
+
+.dashboard-content {
+  width: 100%;
+}
+
+.dashboard-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.dashboard-container div {
+  margin-top: 20px;
+  display: block;
+  flex: 1;
+  min-width: 45%;
+}
