@@ -134,3 +134,21 @@
 .dashboard-card-content {
   padding: 0 20px 20px 20px;
 }
+
+/* Table */
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table th, .table tr {
+  border: 1px solid rgb(190, 190, 190);
+  padding: 10px 10px;
+  font-size: 0.875em;
+}
+
+.table th {
+  text-align: left;
+  background: rgba(0, 128, 0, 0.123);
+}
