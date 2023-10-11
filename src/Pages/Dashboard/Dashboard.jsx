@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import DashboardCard from "../../components/DashboardCard/DashboardCard";
+
 import Axios from "axios";
 
 function Dashboard({ }) {
@@ -6,10 +8,10 @@ function Dashboard({ }) {
         <section className="dashboard-content">
             <h1>Dashboard</h1>
             <div className="dashboard-container">
-                <div>a</div>
-                <div>a</div>
-                <div>a</div>
-                <div>a</div>
+                <DashboardCard title={"a"}>a</DashboardCard>
+                <DashboardCard title={"b"}>a</DashboardCard>
+                <DashboardCard title={"c"}>a</DashboardCard>
+                <DashboardCard title={"d"}>a</DashboardCard>
             </div>
         </section>
     );

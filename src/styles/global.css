@@ -109,9 +109,28 @@
   gap: 20px;
 }
 
-.dashboard-container div {
+.dashboard-container .card {
   margin-top: 20px;
+  min-width: 45%;
+}
+
+/* Card */
+
+.card {
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   display: block;
   flex: 1;
-  min-width: 45%;
+}
+
+/* Dashboard Card */
+
+.title-card {
+  height: 60px;
+  line-height: 60px;
+  padding: 0 20px;
+}
+
+.dashboard-card-content {
+  padding: 0 20px 20px 20px;
 }
