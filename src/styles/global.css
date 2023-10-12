@@ -118,7 +118,8 @@
 
 .card {
   border-radius: 2px;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   display: block;
   flex: 1;
 }
@@ -142,7 +143,8 @@
   width: 100%;
 }
 
-.table th, .table tr {
+.table th,
+.table td {
   border: 1px solid rgb(190, 190, 190);
   padding: 10px 10px;
   font-size: 0.875em;
@@ -151,4 +153,8 @@
 .table th {
   text-align: left;
   background: rgba(0, 128, 0, 0.123);
+}
+
+.sem-itens {
+  text-align: center;
 }

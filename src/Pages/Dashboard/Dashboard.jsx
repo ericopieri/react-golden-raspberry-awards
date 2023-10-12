@@ -9,7 +9,7 @@ function Dashboard({ }) {
         <section className="dashboard-content">
             <h1>Dashboard</h1>
             <div className="dashboard-container">
-                <DashboardCard title={"a"}>
+                <DashboardCard title="List years with multiple winners">
                     <MultipleWinnersYearsTable></MultipleWinnersYearsTable>
                 </DashboardCard>
                 <DashboardCard title={"b"}>a</DashboardCard>
