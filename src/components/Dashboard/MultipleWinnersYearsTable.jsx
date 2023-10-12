@@ -8,8 +8,9 @@ function MultipleWinnersYearsTable({ }) {
 
     const fetchYearsMoreThanOneWinner = async () => {
         const { data } =  await axios.get("https://tools.texoit.com/backend-java/api/movies?projection=years-with-multiple-winners");
-
-        setYearsMoreThanOneWinner(data.years);
+        const { years } = data;
+        
+        setYearsMoreThanOneWinner(years);
     };
 
     useEffect(() => {
