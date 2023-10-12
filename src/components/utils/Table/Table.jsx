@@ -2,9 +2,7 @@ import TableHeader from "../TableHeader/TableHeader";
 import TableRowContent from "../TableRowContent/TableRowContent";
 
 function Table({ tableData, columns }) {
-    console.log(tableData);
-
-    const tableDataMap = () => {
+    const tableBodyMap = () => {
         if (tableData.length === 0) {
             return <tr>
                 <td colSpan={columns.length} className="sem-itens">Sem itens na tabela!</td>
@@ -17,7 +15,7 @@ function Table({ tableData, columns }) {
                     <TableRowContent rowColumnValues={ Object.values(row) } columnRowIndex={index} />
                 </tr>
             )
-        ) 
+        )
     };
 
     return (
@@ -28,7 +26,7 @@ function Table({ tableData, columns }) {
                 </tr>
             </thead>
             <tbody>
-                { tableDataMap() }
+                { tableBodyMap() }
             </tbody>
         </table>
     );

@@ -3,13 +3,13 @@ import { useEffect, useState } from "react";
 
 import axios from "axios";
 
-function MultipleWinnersYearsTable({ }) {
-    const [yearsMoreThanOneWinner, setYearsMoreThanOneWinner] = useState(Array());
+function MultipleWinnersYearsTable() {
+    const [yearsMoreThanOneWinner, setYearsMoreThanOneWinner] = useState([]);
 
     const fetchYearsMoreThanOneWinner = async () => {
         const { data } =  await axios.get("https://tools.texoit.com/backend-java/api/movies?projection=years-with-multiple-winners");
         const { years } = data;
-        
+
         setYearsMoreThanOneWinner(years);
     };
 
@@ -19,7 +19,7 @@ function MultipleWinnersYearsTable({ }) {
 
     return (
         <Table
-            columns={Array("Year", "WinCount")}
+            columns={["Year", "WinCount"]}
             tableData={yearsMoreThanOneWinner}
         />
     );
