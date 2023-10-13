@@ -8,6 +8,8 @@
 /* Header */
 
 .header {
+  position: relative;
+  z-index: 2;
   height: 60px;
   display: flex;
   align-items: center;
@@ -21,8 +23,9 @@
 /* Main Content */
 
 .main-content-container {
+  position: relative;
+  z-index: 1;
   display: flex;
-
   min-height: calc(100vh - 60px);
 }
 
@@ -47,7 +50,6 @@
   width: 300px;
   background: cyan;
   min-height: calc(100vh - 60px);
-  height: 100%;
   background: #f7f7f7;
   border-radius: 2px; /* 角を丸くする */
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
@@ -131,6 +133,12 @@
   padding: 0 20px;
 }
 
+.title-card h2 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .dashboard-card-content {
   padding: 0 20px 20px 20px;
 }
@@ -205,4 +213,40 @@
 
 .per-year-filter input {
   flex: 1;
+}
+
+@media screen and (max-width: 1330px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .main-content-container {
+    flex-direction: column;
+  }
+
+  .side-menu {
+    width: 100%;
+    min-height: 150px;
+    margin-left: 0;
+    margin-top: -150px;
+    max-height: 150px;
+  }
+
+  .side-menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .side-menu ul li {
+    padding: 5px 10px;
+  }
+
+  .side-menu.activated {
+    margin-top: 0;
+  }
 }

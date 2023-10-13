@@ -4,7 +4,7 @@ function DashboardCard({ title, children}) {
     return (
         <Card>
             <div className="title-card">
-                <h2>{ title }</h2>
+                <h2 title={title}>{ title }</h2>
             </div>
             <div className="dashboard-card-content">
                 { children }
