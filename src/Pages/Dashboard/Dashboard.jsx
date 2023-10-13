@@ -1,5 +1,8 @@
 import DashboardCard from "../../components/DashboardCard/DashboardCard";
-import MultipleWinnersYearsTable from "../../components/Dashboard/MultipleWinnersYearsTable.jsx";
+import MultipleWinnersYearsTable from "../../components/DashboardTables/MultipleWinnersYearsTable.jsx";
+import Top3StudiosMoreWinnersTable from "../../components/DashboardTables/Top3StudiosMoreWinnersTable";
+import MaxMinWinnerProducerInterval from "../../components/DashboardTables/MaxMinWinnerProducerInterval";
+import WinnersPerYear from "../../components/DashboardTables/WinnersPerYear";
 
 function Dashboard() {
     return (
@@ -9,9 +12,15 @@ function Dashboard() {
                 <DashboardCard title="List years with multiple winners">
                     <MultipleWinnersYearsTable />
                 </DashboardCard>
-                <DashboardCard title={"b"}>a</DashboardCard>
-                <DashboardCard title={"c"}>a</DashboardCard>
-                <DashboardCard title={"d"}>a</DashboardCard>
+                <DashboardCard title={"Top 3 Studios winners"}>
+                    <Top3StudiosMoreWinnersTable />
+                </DashboardCard>
+                <DashboardCard title={"Producers with longest and shortest interval between wins"}>
+                    <MaxMinWinnerProducerInterval />
+                </DashboardCard>
+                <DashboardCard title={"List movie by year"}>
+                    <WinnersPerYear />
+                </DashboardCard>
             </div>
         </section>
     );
