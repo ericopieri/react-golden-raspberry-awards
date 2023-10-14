@@ -44,7 +44,7 @@ function WinnersPerYear() {
                     setYearFilter={setYearFilter}
                     handlePressEnter={fetchWinnersPerYear}
                 />
-                <DefaultButton content="Filtrar!" handleClick={fetchWinnersPerYear} />
+                <DefaultButton content="Filter!" handleClick={fetchWinnersPerYear} />
             </div>
             <Table columns={["Id", "Year", "Title"]} tableData={winnersPerYear} />
         </>

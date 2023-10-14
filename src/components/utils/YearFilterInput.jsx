@@ -11,7 +11,7 @@ function YearFilterInput({ setYearFilter, value, handlePressEnter }) {
 
     return (
         <Input
-            placeholder="Ano"
+            placeholder="Year"
             type="number"
             name="movieYear"
             value={value}

@@ -5,7 +5,7 @@ function Table({ tableData, columns }) {
     const tableBodyMap = () => {
         if (tableData.length === 0) {
             return <tr>
-                <td colSpan={columns.length} className="sem-itens">Sem itens na tabela!</td>
+                <td colSpan={columns.length} className="empty-table">Empty table!</td>
             </tr>
         }
 

@@ -9,7 +9,7 @@ function SideMenu({ isSideMenuOpen, setSideMenuOpen }) {
     return (
         <nav className={ "side-menu" + compClassMenuActivated }>
             <div style={{ textAlign: "right" }}>
-                <DefaultButton content="Fechar" handleClick={toggleSideMenuToClosed} />
+                <DefaultButton content="Close" handleClick={toggleSideMenuToClosed} />
             </div>
             <ul>
                 <li>

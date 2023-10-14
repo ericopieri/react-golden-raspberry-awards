@@ -70,7 +70,7 @@ function MovieListContent() {
                         handleClick={
                             () => fetchMovies(1)
                         }
-                        content="Filtrar!"
+                        content="Filter!"
                     />
                 </div>
                 <PaginationTable

@@ -19,7 +19,7 @@ function MultipleWinnersYearsTable() {
 
     return (
         <Table
-            columns={["Year", "WinCount"]}
+            columns={["Year", "Win Count"]}
             tableData={yearsMoreThanOneWinner}
         />
     );

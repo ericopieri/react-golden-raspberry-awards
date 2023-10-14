@@ -21,7 +21,7 @@ function Top3StudiosMoreWinners() {
 
     return (
         <Table 
-            columns={["Name", "WinCount"]}
+            columns={["Name", "Win Count"]}
             tableData={top3WinnerStudios}
         />
     );
