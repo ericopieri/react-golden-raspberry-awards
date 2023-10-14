@@ -1,7 +1,19 @@
-import Table from "./Table";
 import { useEffect, useState } from "react";
 
+import Table from "./Table";
 
+
+/**
+ * Extensão do componente genérico de Tabela. Cria uma tabela com sistema de páginação.
+ * 
+ * @param {Array} tableData Lista com os valores que serão cada linha da tabela que está sendo criada.
+ * @param {Array} columns Lista com os nomes das colunas do header da tabela.
+ * @param {function} handleChangePage Função callback que é executada quando o estado da página interna muda.
+ * @param {Boolean} enabledPagination Indica se o sistema de páginação deve funcionar. Falso: a barra inferior de troca de página fica desabilitada.
+ * @param {Boolean} last Indica se o grupo de dados exibidos no momento, na tabela, é o grupo de dados da última página possível para aquele filtro.
+ * @param {Number} lastPageNumber Número da última página possível para o grupo de dados e filtro atual.
+ * @returns void
+ */
 function PaginatedTable({ tableData, columns, handleChangePage, enabledPagination, last, lastPageNumber }) {
     const [activatedPage, setActivatedPage] = useState(1);
 

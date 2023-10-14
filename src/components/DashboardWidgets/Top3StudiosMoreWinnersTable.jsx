@@ -1,7 +1,15 @@
-import Table from "../utils/Table/Table";
-import { useState, useEffect } from "react";
 import axios from "axios";
 
+import Table from "../utils/Table/Table";
+
+import { useState, useEffect } from "react";
+
+
+/**
+ * Painel widget que exibe em tabela os anos em que houveram mais de um ganhador do prêmio.
+ * 
+ * @returns void
+ */
 function Top3StudiosMoreWinners() {
     const [top3WinnerStudios, setTop3WinnerStudios] = useState([]);
 

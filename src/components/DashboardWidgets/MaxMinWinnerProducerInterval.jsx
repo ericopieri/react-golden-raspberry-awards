@@ -1,8 +1,15 @@
-import Table from "../utils/Table/Table";
 import axios from "axios";
+
+import Table from "../utils/Table/Table";
 
 import { useState, useEffect } from "react";
 
+
+/**
+ * Painel widget que exibe, em duas tabelas subsequentes, o Produtor com o Maior intervalo entre prêmios e o de Menor intervalo entre Prêmios, respectivamente.
+ * 
+ * @returns void
+ */
 function MaxMinWinnerProducerInterval() {
     const [maxMinWinnerProducerInterval, setMaxMinWinnerProducerInterval] = useState({
         max: [],

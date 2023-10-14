@@ -1,6 +1,14 @@
 import TableHeader from "../TableHeader/TableHeader";
 import TableRowContent from "../TableRowContent/TableRowContent";
 
+
+/**
+ * Componente genérico para criação de tabelas HTML reutilizáveis.
+ * 
+ * @param {Array} columns Lista com os nomes das colunas do header da tabela.
+ * @param {Array} tableData Lista com os valores que serão cada linha da tabela que está sendo criada.
+ * @returns void
+ */
 function Table({ tableData, columns }) {
     const tableBodyMap = () => {
         if (tableData.length === 0) {

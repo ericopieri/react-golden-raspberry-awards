@@ -1,13 +1,19 @@
-import Card from "../../components/Card/Card";
+import axios from "axios";
+
+import Card from "../../components/utils/Card";
 import PaginationTable from "../../components/utils/Table/PaginatedTable";
 import YearFilterInput from "../../components/utils/YearFilterInput";
 import DefaultButton from "../../components/utils/DefaultButton";
 import CheckBox from "../../components/utils/CheckBox";
 
-import axios from "axios";
-
 import { useState } from "react";
 
+
+/**
+ * Page que será exibido no conteúdo princiapal da página na rota `/itens`. Lista de Filmes que oferece filtro por ano concorrido e filtro por Vencedor/Perdedor.
+ * 
+ * @returns void
+ */
 function MovieListContent() {
     const [movies, setMovies] = useState([]);
 

@@ -1,9 +1,15 @@
 import DashboardCard from "../../components/DashboardCard/DashboardCard";
-import MultipleWinnersYearsTable from "../../components/DashboardTables/MultipleWinnersYearsTable.jsx";
-import Top3StudiosMoreWinnersTable from "../../components/DashboardTables/Top3StudiosMoreWinnersTable";
-import MaxMinWinnerProducerInterval from "../../components/DashboardTables/MaxMinWinnerProducerInterval";
-import WinnersPerYear from "../../components/DashboardTables/WinnersPerYear";
+import MultipleWinnersYearsTable from "../../components/DashboardWidgets/MultipleWinnersYearsTable.jsx";
+import Top3StudiosMoreWinnersTable from "../../components/DashboardWidgets/Top3StudiosMoreWinnersTable";
+import MaxMinWinnerProducerInterval from "../../components/DashboardWidgets/MaxMinWinnerProducerInterval";
+import WinnersPerYear from "../../components/DashboardWidgets/WinnersPerYear";
 
+
+/**
+ * Page que será exibido no conteúdo princiapal da página na rota raiz. Agrupador de painéis do tipo widget.
+ * 
+ * @returns void
+ */
 function Dashboard() {
     return (
         <section className="dashboard-content">

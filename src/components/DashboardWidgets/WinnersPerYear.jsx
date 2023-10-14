@@ -1,20 +1,20 @@
+import axios from "axios";
+
+import Table from "../utils/Table/Table";
 import YearFilterInput from "../utils/YearFilterInput";
 import DefaultButton from "../utils/DefaultButton";
-import Table from "../utils/Table/Table";
-import axios from "axios";
+
 import { useState } from "react";
 
+
+/**
+ * Painel widget que exibe os ganhadores do prêmio por ano. O ano é informado pelo usuário através de um campo de filtro.
+ * 
+ * @returns void
+ */
 function WinnersPerYear() {
     const [yearFilter, setYearFilter] = useState("");
     const [winnersPerYear, setWinnersPerYear] = useState([]);
-
-    function handleChangeFilter(event) {
-        if (event.target.value.length > 4) {
-            return null;
-        };
-
-        setYearFilter(event.target.value);
-    }
 
     const fetchWinnersPerYear = async () => {
         if (yearFilter === "") {

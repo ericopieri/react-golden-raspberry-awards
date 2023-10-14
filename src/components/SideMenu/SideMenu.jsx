@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
+
 import DefaultButton from "../utils/DefaultButton";
 
+
+/**
+ * Componente do Menu Lateral do Sistema. É aqui que o usuário pode mudar a page visualizada no conteúdo principal.
+ * 
+ * @param {Boolean} isSideMenuOpen Propriedade herdada do elemento que controla se o Menu lateral do sistema está aberta ou fechado
+ * @param {function} setSideMenuOpen Callback para mudar a propriedade `isSideMenuOpen` 
+ * @returns void
+ */
 function SideMenu({ isSideMenuOpen, setSideMenuOpen }) {
     const toggleSideMenuToClosed = () => setSideMenuOpen(false);
 
