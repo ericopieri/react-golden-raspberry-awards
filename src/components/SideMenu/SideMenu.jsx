@@ -13,10 +13,10 @@ function SideMenu({ isSideMenuOpen, setSideMenuOpen }) {
             </div>
             <ul>
                 <li>
-                    <Link to={"/dashboard"}>Dashboard</Link>
+                    <Link to={"/"}>Dashboard</Link>
                 </li>
                 <li>
-                    <Link to={"/itens"}>Itens</Link>
+                    <Link to={"/movies"}>Itens</Link>
                 </li>
             </ul>
         </nav>
