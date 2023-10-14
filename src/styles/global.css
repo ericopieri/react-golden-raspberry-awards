@@ -293,6 +293,7 @@
 /* Pagination */
 
 .pagination-container {
+  overflow-x: auto;
   display: flex;
   align-items: center;
   justify-content: center;
