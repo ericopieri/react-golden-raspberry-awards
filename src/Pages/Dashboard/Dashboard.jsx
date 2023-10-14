@@ -7,7 +7,7 @@ import WinnersPerYear from "../../components/DashboardTables/WinnersPerYear";
 function Dashboard() {
     return (
         <section className="dashboard-content">
-            <h1 className="title-dashboard">Dashboard</h1>
+            <h1 className="title-content">Dashboard</h1>
             <div className="dashboard-container">
                 <DashboardCard title="List years with multiple winners">
                     <MultipleWinnersYearsTable />

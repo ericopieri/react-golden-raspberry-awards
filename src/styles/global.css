@@ -105,7 +105,7 @@
   width: 100%;
 }
 
-.dashboard-content .title-dashboard {
+.title-content {
   margin-bottom: 15px;
   text-align: center;
 }
@@ -159,7 +159,8 @@
 }
 
 .table th,
-.table td {
+.table td,
+.pagination-container {
   border: 1px solid rgb(190, 190, 190);
   padding: 10px 10px;
   font-size: 0.875em;
@@ -203,7 +204,8 @@
 
 /* Per Year Filter */
 
-.per-year-filter {
+.per-year-filter,
+.movies-filter {
   display: flex;
   gap: 5px;
   margin-bottom: 20px;
@@ -265,4 +267,62 @@
   .side-menu.activated {
     margin-top: 0;
   }
+}
+
+/* Movie List */
+
+.movielist-content {
+  width: 100%;
+}
+
+.movielist-content .card {
+  padding: 20px;
+}
+
+/* Check Box */
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+/* Pagination */
+
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 128, 0, 0.123);
+}
+
+.pagination-disabled {
+  pointer-events: none;
+  background: #eee;
+}
+
+.pagination-box {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.pagination-box button {
+  padding: 5px 10px;
+  font-size: 1em;
+  background: darkgreen;
+  color: rgb(149, 255, 149);
+  border-radius: 3px;
+  border: 1px solid rgb(149, 255, 149);
+  cursor: pointer;
+}
+
+.pagination-box .disabled-button {
+  background: #eee;
+  border: 1px solid #9c9c9c;
+  color: #9c9c9c;
+  cursor: auto;
 }

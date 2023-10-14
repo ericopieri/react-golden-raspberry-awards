@@ -1,4 +1,4 @@
-import Input from "../utils/Input";
+import YearFilterInput from "../utils/YearFilterInput";
 import DefaultButton from "../utils/DefaultButton";
 import Table from "../utils/Table/Table";
 import axios from "axios";
@@ -39,12 +39,9 @@ function WinnersPerYear() {
     return (
         <>
             <div className="per-year-filter">
-                <Input
-                    placeholder="Ano"
-                    label="label"
-                    name="ano" type="number"
+                <YearFilterInput
                     value={yearFilter}
-                    handleOnChange={handleChangeFilter}
+                    setYearFilter={setYearFilter}
                     handlePressEnter={fetchWinnersPerYear}
                 />
                 <DefaultButton content="Filtrar!" handleClick={fetchWinnersPerYear} />
