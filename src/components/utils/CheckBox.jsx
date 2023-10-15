@@ -12,6 +12,7 @@ function CheckBox({ checked, name, label, handleChangeChecked }) {
         <div className="checkbox-container">
             <label htmlFor={name}>{ label }</label>
             <input
+                data-testid="checkbox"        
                 type="checkbox"
                 checked={checked}
                 name={name}
