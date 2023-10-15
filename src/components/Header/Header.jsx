@@ -12,7 +12,7 @@ function Header({ setSideMenuOpen }) {
 
     return (
         <header className="header">
-            <DefaultButton content=">"  handleClick={toggleSideMenuToOpen}/>
+            <DefaultButton content=">" handleClick={toggleSideMenuToOpen}/>
             <span>Golden Raspberry Awards!</span>
         </header>
     );

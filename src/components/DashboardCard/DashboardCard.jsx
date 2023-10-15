@@ -1,5 +1,6 @@
 import Card from "../utils/Card";
 
+
 /**
  * Extensão do Card, usado para os painéis do tipo widget que estão no dashboard.
  * 

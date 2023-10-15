@@ -16,16 +16,16 @@ function SideMenu({ isSideMenuOpen, setSideMenuOpen }) {
     const compClassMenuActivated = isSideMenuOpen ? " " + "activated" : "";
 
     return (
-        <nav className={ "side-menu" + compClassMenuActivated }>
+        <nav data-testid="side-menu" className={ "side-menu" + compClassMenuActivated }>
             <div style={{ textAlign: "right" }}>
                 <DefaultButton content="Close" handleClick={toggleSideMenuToClosed} />
             </div>
             <ul>
                 <li>
-                    <Link to={"/"}>Dashboard</Link>
+                    <Link data-testid="dashboard-link" to={"/"}>Dashboard</Link>
                 </li>
                 <li>
-                    <Link to={"/movies"}>Itens</Link>
+                    <Link data-testid="movies-link" to={"/movies"}>Itens</Link>
                 </li>
             </ul>
         </nav>

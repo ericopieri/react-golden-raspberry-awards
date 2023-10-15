@@ -53,7 +53,7 @@ function PaginatedTable({ tableData, columns, handleChangePage, enabledPaginatio
                         Next
                     </button>
                     <button onClick={() => setActivatedPage(lastPageNumber - 1)}>
-                        Last
+                        Last Page
                     </button>
                 </div>
             </div>
