@@ -3,33 +3,39 @@ import { render, fireEvent } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 
 test("test SideMenu component renders correctly", () => {
-  const mockSetSideMenuOpen = jest.fn();
+	const mockSetSideMenuOpen = jest.fn();
 
-  const { getByText } = render(
-    <MemoryRouter>
-      <SideMenu isSideMenuOpen={true} setSideMenuOpen={mockSetSideMenuOpen} />
-    </MemoryRouter>
-  );
+	const { getByText } = render(
+		<MemoryRouter>
+			<SideMenu
+				isSideMenuOpen={true}
+				setSideMenuOpen={mockSetSideMenuOpen}
+			/>
+		</MemoryRouter>
+	);
 
-  const dashboardLinkButton = getByText("Dashboard");
-  const moviesListLinkButton = getByText("Itens");
+	const dashboardLinkButton = getByText("Dashboard");
+	const moviesListLinkButton = getByText("Itens");
 
-  expect(dashboardLinkButton).toBeInTheDocument();
-  expect(moviesListLinkButton).toBeInTheDocument();
+	expect(dashboardLinkButton).toBeInTheDocument();
+	expect(moviesListLinkButton).toBeInTheDocument();
 });
 
 test("should toggle side menu to closed", () => {
-  const mockSetSideMenuOpen = jest.fn();
+	const mockSetSideMenuOpen = jest.fn();
 
-  const { getByText } = render(
-    <MemoryRouter>
-      <SideMenu isSideMenuOpen={true} setSideMenuOpen={mockSetSideMenuOpen} />
-    </MemoryRouter>
-  );
+	const { getByText } = render(
+		<MemoryRouter>
+			<SideMenu
+				isSideMenuOpen={true}
+				setSideMenuOpen={mockSetSideMenuOpen}
+			/>
+		</MemoryRouter>
+	);
 
-  const closeSideMenuButton = getByText("Close");
+	const closeSideMenuButton = getByText("Close");
 
-  fireEvent.click(closeSideMenuButton);
+	fireEvent.click(closeSideMenuButton);
 
-  expect(mockSetSideMenuOpen).toHaveBeenCalledWith(false);
+	expect(mockSetSideMenuOpen).toHaveBeenCalledWith(false);
 });

@@ -1,321 +1,327 @@
 /* Container Flex */
 
 .flex-container {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 /* Header */
 
 .header {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  font-size: 1.2em;
-  padding: 0 20px;
-  background: rgb(0, 148, 0);
-  color: white;
-  gap: 15px;
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	font-size: 1.2em;
+	padding: 0 20px;
+	background: rgb(0, 148, 0);
+	color: white;
+	gap: 15px;
 }
 
 /* Main Content */
 
 .main-content-container {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  min-height: calc(100vh - 60px);
+	position: relative;
+	z-index: 1;
+	display: flex;
+	min-height: calc(100vh - 60px);
 }
 
 /* Main Content */
 
 .main-content {
-  padding: 20px;
-  display: block;
-  width: 100%;
+	padding: 20px;
+	display: block;
+	width: 100%;
 }
 
 /* Side Menu */
 
 .closed {
-  margin-left: -300px;
+	margin-left: -300px;
 }
 
 .side-menu {
-  padding: 20px;
-  margin-left: -300px;
-  transition: ease-in-out 0.5s margin;
-  width: 300px;
-  background: cyan;
-  min-height: calc(100vh - 60px);
-  background: #f7f7f7;
-  border-radius: 2px; /* 角を丸くする */
-  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
+	padding: 20px;
+	margin-left: -300px;
+	transition: ease-in-out 0.5s margin;
+	width: 300px;
+	background: cyan;
+	min-height: calc(100vh - 60px);
+	background: #f7f7f7;
+	border-radius: 2px; /* 角を丸くする */
+	box-shadow:
+		0 0 3px 0 rgba(0, 0, 0, 0.12),
+		0 2px 3px 0 rgba(0, 0, 0, 0.22);
 }
 
 .side-menu.activated {
-  margin-left: 0;
+	margin-left: 0;
 }
 
 .side-menu ul {
-  margin-top: 10px;
+	margin-top: 10px;
 }
 
 .side-menu ul li {
-  cursor: pointer;
-  padding: 5px 0;
-  transition: 0.35s;
-  text-align: center;
-  color: rgb(71, 71, 71);
-  border-radius: 5px;
+	cursor: pointer;
+	padding: 5px 0;
+	transition: 0.35s;
+	text-align: center;
+	color: rgb(71, 71, 71);
+	border-radius: 5px;
 }
 
 .side-menu ul li + li {
-  margin-top: 5px;
+	margin-top: 5px;
 }
 
 .side-menu ul li:hover {
-  background: rgb(190, 190, 190);
-  color: white;
+	background: rgb(190, 190, 190);
+	color: white;
 }
 
 /* Default Button */
 
 .default-button {
-  cursor: pointer;
-  display: inline-block;
-  padding: 10px 20px;
-  color: rgb(149, 255, 149);
-  background: darkgreen;
-  border-radius: 3px;
-  transition: 0.35s;
+	cursor: pointer;
+	display: inline-block;
+	padding: 10px 20px;
+	color: rgb(149, 255, 149);
+	background: darkgreen;
+	border-radius: 3px;
+	transition: 0.35s;
 }
 
 .default-button:hover {
-  background: rgb(149, 255, 149);
-  color: darkgreen;
+	background: rgb(149, 255, 149);
+	color: darkgreen;
 }
 
 /* Dashboard */
 
 .dashboard-content {
-  width: 100%;
+	width: 100%;
 }
 
 .title-content {
-  margin-bottom: 15px;
-  text-align: center;
+	margin-bottom: 15px;
+	text-align: center;
 }
 
 .dashboard-container {
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-  gap: 20px;
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	gap: 20px;
 }
 
 .dashboard-container .card {
-  min-width: 45%;
+	min-width: 45%;
 }
 
 /* Card */
 
 .card {
-  overflow-x: auto;
-  border-radius: 2px;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-  display: block;
-  flex: 1;
+	overflow-x: auto;
+	border-radius: 2px;
+	box-shadow:
+		rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+		rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+	display: block;
+	flex: 1;
 }
 
 /* Dashboard Card */
 
 .title-card {
-  height: 60px;
-  line-height: 60px;
-  padding: 0 20px;
+	height: 60px;
+	line-height: 60px;
+	padding: 0 20px;
 }
 
 .title-card h2 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .dashboard-card-content {
-  padding: 0 20px 20px 20px;
+	padding: 0 20px 20px 20px;
 }
 
 /* Table */
 
 .table {
-  user-select: none;
-  border-collapse: collapse;
-  width: 100%;
+	user-select: none;
+	border-collapse: collapse;
+	width: 100%;
 }
 
 .table th,
 .table td,
 .pagination-container {
-  border: 1px solid rgb(190, 190, 190);
-  padding: 10px 10px;
-  font-size: 0.875em;
+	border: 1px solid rgb(190, 190, 190);
+	padding: 10px 10px;
+	font-size: 0.875em;
 }
 
 .table th {
-  text-align: left;
-  background: rgba(0, 128, 0, 0.123);
+	text-align: left;
+	background: rgba(0, 128, 0, 0.123);
 }
 
 .table tr:nth-child(even) {
-  background: rgba(0, 0, 0, 0.025);
+	background: rgba(0, 0, 0, 0.025);
 }
 
 .empty-table {
-  text-align: center;
+	text-align: center;
 }
 
 /* Max Min Winner */
 
 .maxmin-title {
-  font-size: 1.2em;
+	font-size: 1.2em;
 }
 
 .maxmin-container table {
-  margin: 12px 0;
+	margin: 12px 0;
 }
 
 /* Input */
 
 .input {
-  width: 100%;
-  padding: 7px;
-  font-size: 0.95em;
-  border-radius: 3px;
-  border: 1px solid transparent;
-  border-top: none;
-  border-bottom: 1px solid #ddd;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.39), 0 -1px 1px #fff, 0 1px 0 #fff;
+	width: 100%;
+	padding: 7px;
+	font-size: 0.95em;
+	border-radius: 3px;
+	border: 1px solid transparent;
+	border-top: none;
+	border-bottom: 1px solid #ddd;
+	box-shadow:
+		inset 0 1px 2px rgba(0, 0, 0, 0.39),
+		0 -1px 1px #fff,
+		0 1px 0 #fff;
 }
 
 /* Per Year Filter */
 
 .per-year-filter,
 .movies-filter {
-  display: flex;
-  gap: 5px;
-  margin-bottom: 20px;
+	display: flex;
+	gap: 5px;
+	margin-bottom: 20px;
 }
 
 .per-year-filter input {
-  flex: 1;
+	flex: 1;
 }
 
 /* Movie List */
 
 .movielist-content {
-  width: 100%;
+	width: 100%;
 }
 
 .movielist-content .card {
-  padding: 20px;
+	padding: 20px;
 }
 
 /* Check Box */
 
 .checkbox-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 0 10px;
-  border: 1px solid #ddd;
-  border-radius: 3px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 0 10px;
+	border: 1px solid #ddd;
+	border-radius: 3px;
 }
 
 /* Pagination */
 
 .pagination-container {
-  overflow-x: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 128, 0, 0.123);
+	overflow-x: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0, 128, 0, 0.123);
 }
 
 .pagination-disabled {
-  pointer-events: none;
-  background: #eee;
+	pointer-events: none;
+	background: #eee;
 }
 
 .pagination-box {
-  display: flex;
-  gap: 15px;
-  align-items: center;
+	display: flex;
+	gap: 15px;
+	align-items: center;
 }
 
 .pagination-box button {
-  padding: 5px 10px;
-  font-size: 1em;
-  background: darkgreen;
-  color: rgb(149, 255, 149);
-  border-radius: 3px;
-  border: 1px solid rgb(149, 255, 149);
-  cursor: pointer;
+	padding: 5px 10px;
+	font-size: 1em;
+	background: darkgreen;
+	color: rgb(149, 255, 149);
+	border-radius: 3px;
+	border: 1px solid rgb(149, 255, 149);
+	cursor: pointer;
 }
 
 .pagination-box .disabled-button {
-  background: #eee;
-  border: 1px solid #9c9c9c;
-  color: #9c9c9c;
-  cursor: auto;
+	background: #eee;
+	border: 1px solid #9c9c9c;
+	color: #9c9c9c;
+	cursor: auto;
 }
 
 /* Responsividade */
 
 @media screen and (max-width: 1330px) {
-  .dashboard-container {
-    flex-direction: column;
-  }
+	.dashboard-container {
+		flex-direction: column;
+	}
 
-  .card {
-    width: 100%;
-  }
+	.card {
+		width: 100%;
+	}
 }
 
 @media screen and (max-width: 960px) {
-  .main-content-container {
-    flex-direction: column;
-  }
+	.main-content-container {
+		flex-direction: column;
+	}
 
-  .dashboard-container .card {
-    min-width: 100%;
-  }
+	.dashboard-container .card {
+		min-width: 100%;
+	}
 
-  .side-menu {
-    width: 100%;
-    min-height: 150px;
-    margin-left: 0;
-    margin-top: -150px;
-    max-height: 150px;
-  }
+	.side-menu {
+		width: 100%;
+		min-height: 150px;
+		margin-left: 0;
+		margin-top: -150px;
+		max-height: 150px;
+	}
 
-  .side-menu ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-  }
+	.side-menu ul {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 5px;
+	}
 
-  .side-menu ul li {
-    padding: 5px 10px;
-  }
+	.side-menu ul li {
+		padding: 5px 10px;
+	}
 
-  .side-menu.activated {
-    margin-top: 0;
-  }
+	.side-menu.activated {
+		margin-top: 0;
+	}
 }
