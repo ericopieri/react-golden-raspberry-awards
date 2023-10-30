@@ -17,7 +17,7 @@ function Dashboard() {
 				<DashboardCard title="List years with multiple winners">
 					<MultipleWinnersYearsTable />
 				</DashboardCard>
-				<DashboardCard title={"Top 3 Studios winners"}>
+				<DashboardCard title={"Top 3 Studios with winners"}>
 					<Top3StudiosMoreWinnersTable />
 				</DashboardCard>
 				<DashboardCard
@@ -27,7 +27,7 @@ function Dashboard() {
 				>
 					<MaxMinWinnerProducerInterval />
 				</DashboardCard>
-				<DashboardCard title={"List movie by year"}>
+				<DashboardCard title={"List movie winners by year"}>
 					<WinnersPerYear />
 				</DashboardCard>
 			</div>
