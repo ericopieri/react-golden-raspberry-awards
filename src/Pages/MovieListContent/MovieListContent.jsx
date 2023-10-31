@@ -57,10 +57,6 @@ function MovieListContent() {
 	const fetchMovies = async (page) => {
 		const urlCompFilter = mountCompUrl(page);
 
-		console.log(
-			"https://tools.texoit.com/backend-java/api/movies?" + urlCompFilter
-		);
-
 		const { data } = await axios.get(
 			"https://tools.texoit.com/backend-java/api/movies?" + urlCompFilter
 		);
