@@ -39,6 +39,10 @@ function MovieListContent() {
 	function mountCompUrl(page) {
 		let url = "";
 
+		if (isWinnerFilter === null && yearFilter !== "") {
+			return (url += `winner=true&year=${yearFilter}`);
+		}
+
 		if (isWinnerFilter !== null) {
 			url += `winner=${isWinnerFilter}&`;
 		}
@@ -53,13 +57,17 @@ function MovieListContent() {
 	const fetchMovies = async (page) => {
 		const urlCompFilter = mountCompUrl(page);
 
+		console.log(
+			"https://tools.texoit.com/backend-java/api/movies?" + urlCompFilter
+		);
+
 		const { data } = await axios.get(
 			"https://tools.texoit.com/backend-java/api/movies?" + urlCompFilter
 		);
 
-		if (!!Object.keys(data).find((key) => key === "content")) {
-			setHasPagination(true);
-		}
+		!!Object.keys(data).find((key) => key === "content")
+			? setHasPagination(true)
+			: setHasPagination(false);
 
 		setMovies(data);
 	};
