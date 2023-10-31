@@ -231,15 +231,22 @@
 	padding: 20px;
 }
 
-/* Check Box */
+/* RadioInput */
 
-.checkbox-container {
+.iswinnerradiofilter {
 	display: flex;
 	align-items: center;
-	gap: 10px;
 	padding: 0 10px;
 	border: 1px solid #ddd;
 	border-radius: 3px;
+	gap: 15px;
+}
+
+.radio-input-container {
+	font-size: 0.575em;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
 
 /* Pagination */

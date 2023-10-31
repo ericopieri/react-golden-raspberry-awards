@@ -4,7 +4,7 @@ import Card from "../../components/utils/Card";
 import PaginationTable from "../../components/utils/Table/PaginatedTable";
 import YearFilterInput from "../../components/utils/YearFilterInput";
 import DefaultButton from "../../components/utils/DefaultButton";
-import CheckBox from "../../components/utils/CheckBox";
+import IsWinnerRadioFilter from "../../components/utils/IsWinnerRadioFilter";
 
 import { useState } from "react";
 
@@ -17,13 +17,15 @@ function MovieListContent() {
 	const [movies, setMovies] = useState([]);
 
 	const [yearFilter, setYearFilter] = useState("");
-	const [isWinnerFilter, setWinnerFilter] = useState(false);
+	const [isWinnerFilter, setWinnerFilter] = useState(null);
 
-	function hasPagination() {
-		return !!Object.keys(movies).find((key) => key === "content");
-	}
+	const [hasPagination, setHasPagination] = useState(false);
 
-	function mapMoviesToCorrectColumnsTable(movieList) {
+	function mapMoviesToCorrectColumnsTable(movieList = movies) {
+		if (hasPagination) {
+			movieList = movies.content;
+		}
+
 		return movieList.map((movie) => {
 			return {
 				id: movie.id,
@@ -35,11 +37,17 @@ function MovieListContent() {
 	}
 
 	function mountCompUrl(page) {
-		if (yearFilter !== "") {
-			return `winner=${isWinnerFilter}&year=${yearFilter}`;
+		let url = "";
+
+		if (isWinnerFilter !== null) {
+			url += `winner=${isWinnerFilter}&`;
 		}
 
-		return `page=${page}&size=10&winner=${isWinnerFilter}`;
+		if (yearFilter !== "") {
+			return (url += `year=${yearFilter}`);
+		}
+
+		return (url += `page=${page}&size=10`);
 	}
 
 	const fetchMovies = async (page) => {
@@ -48,6 +56,11 @@ function MovieListContent() {
 		const { data } = await axios.get(
 			"https://tools.texoit.com/backend-java/api/movies?" + urlCompFilter
 		);
+
+		if (!!Object.keys(data).find((key) => key === "content")) {
+			setHasPagination(true);
+		}
+
 		setMovies(data);
 	};
 
@@ -59,28 +72,22 @@ function MovieListContent() {
 					<YearFilterInput
 						value={yearFilter}
 						setYearFilter={setYearFilter}
-						handlePressEnter={() => fetchMovies(1)}
+						handlePressEnter={() => fetchMovies(0)}
 					/>
-					<CheckBox
-						checked={isWinnerFilter}
-						name="checkWinner"
-						label="Winner?"
-						handleChangeChecked={() =>
-							setWinnerFilter(!isWinnerFilter)
-						}
+					<IsWinnerRadioFilter
+						isWinnerFilter={isWinnerFilter}
+						handleChangeIsWinnerFilter={setWinnerFilter}
 					/>
 					<DefaultButton
-						handleClick={() => fetchMovies(1)}
+						handleClick={() => fetchMovies(0)}
 						content="Filter!"
 					/>
 				</div>
 				<PaginationTable
 					columns={["Id", "Title", "Year", "Winner?"]}
-					tableData={mapMoviesToCorrectColumnsTable(
-						hasPagination() ? movies.content : movies
-					)}
+					tableData={mapMoviesToCorrectColumnsTable()}
 					handleChangePage={fetchMovies}
-					enabledPagination={hasPagination()}
+					enabledPagination={hasPagination}
 					last={movies.last}
 					lastPageNumber={movies.totalPages}
 				/>

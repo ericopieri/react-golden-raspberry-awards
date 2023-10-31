@@ -21,35 +21,33 @@ function PaginatedTable({
 	last,
 	lastPageNumber,
 }) {
-	const [activatedPage, setActivatedPage] = useState(1);
+	const [activatedPage, setActivatedPage] = useState(0);
 
 	const compClassName = !enabledPagination ? " pagination-disabled" : "";
 
 	useEffect(() => {
-		setActivatedPage(1);
-	}, [enabledPagination]);
-
-	useEffect(() => {
-		handleChangePage(activatedPage);
-	}, []);
-
-	useEffect(() => {
 		handleChangePage(activatedPage);
 	}, [activatedPage]);
+
+	useEffect(() => {
+		setActivatedPage(0);
+	}, [enabledPagination]);
 
 	return (
 		<>
 			<Table tableData={tableData} columns={columns} />
 			<div className={"pagination-container" + compClassName}>
 				<div className="pagination-box">
-					<button onClick={() => setActivatedPage(1)}>
+					<button onClick={() => setActivatedPage(0)}>
 						First Page
 					</button>
 					<button
-						className={activatedPage === 1 ? "disabled-button" : ""}
+						className={activatedPage === 0 ? "disabled-button" : ""}
 						onClick={() =>
-							activatedPage > 1 &&
-							setActivatedPage(activatedPage - 1)
+							activatedPage > 0 &&
+							setActivatedPage(
+								(activatedPage) => activatedPage - 1
+							)
 						}
 					>
 						Previous
@@ -58,7 +56,10 @@ function PaginatedTable({
 					<button
 						className={last ? "disabled-button" : ""}
 						onClick={() =>
-							!last && setActivatedPage(activatedPage + 1)
+							!last &&
+							setActivatedPage(
+								(activatedPage) => activatedPage + 1
+							)
 						}
 					>
 						Next

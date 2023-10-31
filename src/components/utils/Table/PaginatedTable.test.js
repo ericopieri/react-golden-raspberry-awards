@@ -64,7 +64,7 @@ describe("testing PaginatedTable funcionalities", () => {
 
 		fireEvent.click(firstPageButton);
 
-		expect(handleChangePage).toBeCalledWith(1);
+		expect(handleChangePage).toBeCalledWith(0);
 	});
 
 	it("should call the last page", () => {
@@ -111,10 +111,10 @@ describe("testing PaginatedTable funcionalities", () => {
 
 		fireEvent.click(nextPageButton);
 
-		expect(handleChangePage).toBeCalledWith(2);
+		expect(handleChangePage).toBeCalledWith(1);
 
 		fireEvent.click(previousPageButton);
 
-		expect(handleChangePage).toBeCalledWith(1);
+		expect(handleChangePage).toBeCalledWith(0);
 	});
 });
